@@ -8,7 +8,7 @@ MIPS insructions stored in memoryfile which can be found in the file [memoryfile
 This incructions performed [square root digit-by-digit binary numeral system (base 2)](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Digit-by-digit_calculation) with the 9th register
 and the result will be in 12th register (initalized register can be found in [registersfile](./MIPS_MULTICYCLE/registersfile.vhd))
 MIPS code:
-```
+```assembly
 sll $8, $8, 30
 slt $10, $9, $8 (START OF loop1)
 beq $10, $0 , loop2
