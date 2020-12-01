@@ -5,7 +5,7 @@ An implementaiton of the MIPS multicycle processor 32bit using VHDL
 
 ## MIPS instructions:
 MIPS insructions stored in memoryfile which can be found in the file [memoryfile](./MIPS_MULTICYCLE/memoryfile.vhd)
-This incructions performed square root digit-by-digit binary numeral system (base 2) with the 9th register
+This incructions performed [square root digit-by-digit binary numeral system (base 2)](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Digit-by-digit_calculation) with the 9th register
 and the result will be in 12th register (initalized register can be found in [registersfile](./MIPS_MULTICYCLE/registersfile.vhd))
 MIPS code:
 ```
