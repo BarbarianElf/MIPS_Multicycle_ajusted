@@ -4,7 +4,7 @@ An implementaiton of the MIPS multicycle processor 32bit using VHDL
 ![Picture1](https://user-images.githubusercontent.com/69726708/100778999-64c9cd00-3410-11eb-951b-e0cf526abd0a.png)
 
 ## MIPS instructions:
-MIPS insructions can be found in the file memoryfile.vhd
+MIPS insructions can be found in the file [memoryfile](./MIPS_MULTICYCLE/memoryfile.vhd)
 ## Supported instructions:
 ### R-type (ALU)
 * ALU (add, sub, and, or, slt, sll, srl)
