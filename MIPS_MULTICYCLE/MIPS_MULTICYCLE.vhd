@@ -16,8 +16,8 @@ use IEEE.std_logic_unsigned.all;
 
 entity MIPS_MULTICYCLE is
 	port (
-		  rst			: in  std_logic;
-		  clk			: in  std_logic
+		  rst	: in  std_logic;
+		  clk	: in  std_logic
 	    );
 end entity MIPS_MULTICYCLE;
 
@@ -201,7 +201,7 @@ begin
 			 shamt        => i_reg(10 downto 6),
 			 alu_control  => operation,
 			 alu_result   => alu_result,
-			 zero      	  => zero
+			 zero         => zero
 			);
 
 	alu_out_reg: entity work.register32ena
