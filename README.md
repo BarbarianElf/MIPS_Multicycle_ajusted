@@ -12,7 +12,7 @@ MIPS insructions can be found in the file memoryfile.vhd
 |-|--|--|--|-----|--------|
 |31-26|25-21|20-16|15-11|10-6|5-0|
 
-* function types
+#### function types
 
 |Arith Operation|add|sub|and|or|slt|sll|srl|
 |---------------|---|---|---|--|---|---|---|
@@ -27,7 +27,7 @@ MIPS insructions can be found in the file memoryfile.vhd
 |--|--|--|-------|
 |31-26|25-21|20-16|15-0|
 
-* op code types
+#### op code types
 
 |Operation|beq|lw|sw|
 |---------|---|--|--|
