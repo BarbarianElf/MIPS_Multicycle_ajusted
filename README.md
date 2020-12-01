@@ -94,3 +94,6 @@ sqrt (int input)
 |2|address|
 |-|-------|
 |31-26|25-0|
+
+## FSM moore
+
