@@ -10,22 +10,22 @@ and the result will be in 12th register (initalized register can be found in [re
 MIPS code:
 ```assembly
 sll $8, $8, 30
-slt $10, $9, $8 (START OF loop1)
+slt $10, $9, $8      #(START OF loop1)
 beq $10, $0 , loop2
 srl $8, $8, 2
 j to loop1
-beq $8, $0, end (START OF loop2)
+beq $8, $0, end      #(START OF loop2)
 add $11, $12, $8
 slt $10, $9, $11
 beq $10, $0, else
 srl $12, $12, 1
 j to loopEnd
-sub $9, $9, $11 (START OF else)
+sub $9, $9, $11      #(START OF else)
 srl $12, $12, 1
 add $12, $12, $8
-srl $8, $8, 2 (START OF loopEnd)
+srl $8, $8, 2        #(START OF loopEnd)
 j to loop2
-add $2, $1, $1 (just for add)
+add $2, $1, $1       #(checks add)
 ```
 
 C code:
