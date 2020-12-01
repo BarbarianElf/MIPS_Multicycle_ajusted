@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : MIPS_MULTICYCLE_tb.vhd
+-- Author     : Ziv
+-- Created    : 17-08-2020
+-- Last update: 25-08-2020
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;

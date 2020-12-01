@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : registersfile.vhd
+-- Author     : Ziv
+-- Created    : 08-08-2020
+-- Last update: 20-08-2020
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
@@ -30,10 +41,11 @@ begin
 	sync: process(clk, rst)
 	begin
 		if (rst = '0') then
-			bor <= ( 1      => x"00000001",
-					 8      => x"00000001",
-					 9      => x"00000064",
-				     others => x"00000000");
+			bor <= (
+					1      => x"00000001",
+					8      => x"00000001",
+					9      => x"00000064",
+					others => x"00000000");
 		elsif  rising_edge(clk) then
 			if (reg_write = '1') then
 				bor(conv_integer(wr_reg)) <= wr_data;

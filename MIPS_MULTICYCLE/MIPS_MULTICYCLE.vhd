@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : MIPS_MULTICYCLE.vhd
+-- Author     : Ziv
+-- Created    : 16-08-2020
+-- Last update: 21-08-2020
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
@@ -17,8 +28,8 @@ architecture MIPS_MULTICYCLE of MIPS_MULTICYCLE is
 	signal wr_reg : std_logic_vector (4 downto 0);
 	signal zero   : std_logic;
 	-- control signals
-	signal pc_write_cond, pc_write, pc_ena, i_or_d, mem_read, mem_write : std_logic;
-	signal mem_to_reg, ir_write, reg_dst, reg_write, alu_src_a         : std_logic;
+	signal pc_write_cond, pc_write, pc_ena, i_or_d, mem_read, mem_write	: std_logic;
+	signal mem_to_reg, ir_write, reg_dst, reg_write, alu_src_a			: std_logic;
 	signal alu_src_b, alu_op, pc_source : std_logic_vector (1 downto 0);
 	signal operation                    : std_logic_vector (3 downto 0);	
 begin
@@ -186,7 +197,7 @@ begin
 	alu: entity work.ALU
 	port map(
 			 a            => alu_a,
-		     b            => alu_b,
+			 b            => alu_b,
 			 shamt        => i_reg(10 downto 6),
 			 alu_control  => operation,
 			 alu_result   => alu_result,

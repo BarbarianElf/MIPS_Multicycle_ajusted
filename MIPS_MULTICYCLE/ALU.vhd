@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : ALU.vhd
+-- Author     : Ziv
+-- Created    : 07-08-2020
+-- Last update: 21-08-2020
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -6,7 +17,7 @@ entity ALU is
 	port (
 		  a            : in  std_logic_vector (31 downto 0);
 		  b            : in  std_logic_vector (31 downto 0);
-		  shamt		   : in  std_logic_vector (4 downto 0);
+		  shamt        : in  std_logic_vector (4 downto 0);
 		  alu_control  : in  std_logic_vector (3 downto 0);
 		  alu_result   : out std_logic_vector (31 downto 0);
 		  zero         : out std_logic

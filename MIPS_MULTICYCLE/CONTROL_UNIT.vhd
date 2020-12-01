@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : CONTROL_UNIT.vhd
+-- Author     : Ziv
+-- Created    : 09-08-2020
+-- Last update: 21-08-2013
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
@@ -8,9 +19,9 @@ entity CONTROL_UNIT is
 		  op			: in  std_logic_vector (5 downto 0);
 		  rst			: in  std_logic;
 		  clk			: in  std_logic;
-		  pc_write_cond : out std_logic;
-		  pc_write      : out std_logic;
-		  i_or_d        : out std_logic;
+		  pc_write_cond	: out std_logic;
+		  pc_write		: out std_logic;
+		  i_or_d		: out std_logic;
 		  mem_read		: out std_logic;
 		  mem_write		: out std_logic;
 		  mem_to_reg	: out std_logic;
