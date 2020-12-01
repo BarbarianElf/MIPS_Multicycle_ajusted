@@ -1,3 +1,14 @@
+-------------------------------------------------------------------------------
+---- Project    : MIPS Multicycle 32bit
+-------------------------------------------------------------------------------
+-- File       : ALU_CONTROL_tb.vhd
+-- Author     : Ziv
+-- Created    : 07-08-2020
+-- Last update: 21-08-2020
+-- Platform   : 
+-- Standard   : VHDL'93
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
