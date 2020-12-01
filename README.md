@@ -96,4 +96,5 @@ sqrt (int input)
 |31-26|25-0|
 
 ## FSM moore
+![Picture2](https://user-images.githubusercontent.com/69726708/100780489-714f2500-3412-11eb-81ad-a56b6e2bf482.png)
 
