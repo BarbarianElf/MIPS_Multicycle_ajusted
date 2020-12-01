@@ -9,23 +9,27 @@ This incructions performed [square root digit-by-digit binary numeral system (ba
 and the result will be in 12th register (initalized register can be found in [registersfile](./MIPS_MULTICYCLE/registersfile.vhd))
 MIPS code:
 ```assembly
-sll $8, $8, 30
-slt $10, $9, $8      #(START OF loop1)
-beq $10, $0 , loop2
-srl $8, $8, 2
-j to loop1
-beq $8, $0, end      #(START OF loop2)
-add $11, $12, $8
-slt $10, $9, $11
-beq $10, $0, else
-srl $12, $12, 1
-j to loopEnd
-sub $9, $9, $11      #(START OF else)
-srl $12, $12, 1
-add $12, $12, $8
-srl $8, $8, 2        #(START OF loopEnd)
-j to loop2
-add $2, $1, $1       #(checks add)
+	sll $8, $8, 30
+loop1:
+	slt $10, $9, $8     
+	beq $10, $0 , loop2  #if input less then $8 then $10=1
+	srl $8, $8, 2        #shift $8 by 2
+	j to loop1
+loop2:
+	beq $8, $0, end      
+	add $11, $12, $8     #if $8 != zero add $8 and $12 to $11
+	slt $10, $9, $11
+	beq $10, $0, else
+	srl $12, $12, 1      #shift $12 right by 1
+	j to loopEnd
+else:
+	sub $9, $9, $11      #decrement $9 by $11
+	srl $12, $12, 1      #shift $12 right by 1
+	add $12, $12, $8     #then add $8 to $12
+loopEnd:
+	srl $8, $8, 2        #shift $8 right by 2
+	j loop2
+	add $2, $1, $1       #(checks add)
 ```
 
 C code:
